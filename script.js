@@ -134,22 +134,33 @@ function startImageRotation() {
 }
 
 // === MUSIC PLAYER ===
-function shuffleMusic() {
-    return shuffle([...MUSIC_FILES]);
-}
-
 function initMusicPlayer() {
     const audio = document.getElementById('background-music');
     const toggleBtn = document.getElementById('music-toggle');
     
-    // Shuffle tracks beim Start
-    let shuffledTracks = shuffleMusic();
-    let trackIndex = 0;
+    // Alle Tracks in Array
+    let playlist = [...MUSIC_FILES];
+    let currentIndex = 0;
     
-    // Lade ersten Track
-    audio.src = MUSIC_FOLDER + shuffledTracks[trackIndex];
+    // Shuffle Funktion direkt hier
+    function shufflePlaylist() {
+        for (let i = playlist.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [playlist[i], playlist[j]] = [playlist[j], playlist[i]];
+        }
+        currentIndex = 0;
+        console.log('Shuffled playlist:', playlist);
+    }
+    
+    // Initial shuffle
+    shufflePlaylist();
+    
+    // Ersten Track laden
+    audio.src = MUSIC_FOLDER + playlist[currentIndex];
     audio.volume = 0.3;
+    console.log('Loading first track:', playlist[currentIndex]);
     
+    // Toggle Button
     toggleBtn.addEventListener('click', () => {
         if (musicPlaying) {
             audio.pause();
@@ -157,43 +168,45 @@ function initMusicPlayer() {
             toggleBtn.classList.add('off');
             musicPlaying = false;
         } else {
-            audio.play().catch(e => {
-                console.log('Autoplay blocked, user interaction required');
-            });
+            audio.play().catch(e => console.log('Play error:', e));
             toggleBtn.textContent = '🔊 Music';
             toggleBtn.classList.remove('off');
             musicPlaying = true;
         }
     });
     
-    // Wenn Track endet, nächsten laden
+    // Wenn Track zu Ende ist
     audio.addEventListener('ended', () => {
-        trackIndex++;
+        console.log('Track ended:', playlist[currentIndex]);
+        currentIndex++;
         
-        // Wenn alle durch sind, neu shuffeln
-        if (trackIndex >= shuffledTracks.length) {
-            shuffledTracks = shuffleMusic();
-            trackIndex = 0;
+        // Wenn alle durch, neu shufflen
+        if (currentIndex >= playlist.length) {
+            console.log('All tracks played, reshuffling...');
+            shufflePlaylist();
         }
         
-        audio.src = MUSIC_FOLDER + shuffledTracks[trackIndex];
+        // Nächsten Track laden
+        audio.src = MUSIC_FOLDER + playlist[currentIndex];
+        console.log('Next track:', playlist[currentIndex]);
         
+        // Weiterspielen wenn Musik an war
         if (musicPlaying) {
-            audio.play().catch(e => {
-                console.log('Play error:', e);
-            });
+            audio.play().catch(e => console.log('Play error:', e));
         }
     });
     
-    // Versuche Autoplay
+    // Autoplay versuchen
     audio.play().then(() => {
         musicPlaying = true;
         toggleBtn.textContent = '🔊 Music';
         toggleBtn.classList.remove('off');
+        console.log('Autoplay successful');
     }).catch(() => {
         musicPlaying = false;
         toggleBtn.textContent = '▶ Play Music';
         toggleBtn.classList.remove('off');
+        console.log('Autoplay blocked');
     });
 }
 
