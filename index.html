@@ -21,12 +21,6 @@
         <!-- Navigation (fixed top) -->
         <nav id="main-nav">
             <div class="nav-container">
-                <div class="nav-logo">
-                    <video class="nav-profile-img" autoplay loop muted playsinline>
-                        <source src="movs/proprop.mp4" type="video/mp4">
-                    </video>
-                </div>
-                
                 <!-- Hamburger Menu Button -->
                 <button class="hamburger" id="hamburger">
                     <span></span>
@@ -34,16 +28,35 @@
                     <span></span>
                 </button>
                 
+                <div class="nav-logo">
+                    <a href="#hero">
+                        <video class="nav-profile-img" autoplay loop muted playsinline>
+                            <source src="movs/proprop.mp4" type="video/mp4">
+                        </video>
+                    </a>
+                </div>
+                
                 <ul class="nav-links" id="nav-links">
                     <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#videos">Featured Performance</a></li>
                     <li><a href="#shop">Shop</a></li>
                 </ul>
+                
                 <div class="nav-actions">
                     <button id="music-toggle" class="nav-music">Music On</button>
-                    <button class="nav-login">Login</button>
+                    <button class="nav-login desktop-only">Login</button>
                 </div>
+            </div>
+            
+            <!-- Mobile Menu Overlay -->
+            <div class="mobile-menu" id="mobile-menu">
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#videos">Featured Performance</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#login">Login</a></li>
+                </ul>
             </div>
         </nav>
 
