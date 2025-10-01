@@ -74,7 +74,11 @@ function initVideoAnimation() {
 function createCollage() {
     const grid = document.getElementById('collage-grid');
     
-    for (let i = 0; i < 6; i++) {
+    // Mobile: 9 Bilder (3x3), Desktop: 6 Bilder (3x2)
+    const isMobile = window.innerWidth <= 768;
+    const imageCount = isMobile ? 9 : 6;
+    
+    for (let i = 0; i < imageCount; i++) {
         const item = document.createElement('div');
         item.className = 'collage-item';
         
@@ -145,14 +149,14 @@ function initMusicPlayer() {
     toggleBtn.addEventListener('click', () => {
         if (musicPlaying) {
             audio.pause();
-            toggleBtn.textContent = 'Music Off';
+            toggleBtn.textContent = '🔇 Music';
             toggleBtn.classList.add('off');
             musicPlaying = false;
         } else {
             audio.play().catch(e => {
                 console.log('Autoplay blocked, user interaction required');
             });
-            toggleBtn.textContent = 'Music On';
+            toggleBtn.textContent = '🔊 Music';
             toggleBtn.classList.remove('off');
             musicPlaying = true;
         }
@@ -174,11 +178,11 @@ function initMusicPlayer() {
     
     audio.play().then(() => {
         musicPlaying = true;
-        toggleBtn.textContent = 'Music On';
+        toggleBtn.textContent = '🔊 Music';
         toggleBtn.classList.remove('off');
     }).catch(() => {
         musicPlaying = false;
-        toggleBtn.textContent = 'Click to Play';
+        toggleBtn.textContent = '▶ Play Music';
         toggleBtn.classList.remove('off');
     });
 }
