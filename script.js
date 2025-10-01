@@ -128,7 +128,7 @@ function changeImage(index) {
 
 function startImageRotation() {
     setInterval(() => {
-        const randomIndex = Math.floor(Math.random() * 6);
+        const randomIndex = Math.floor(Math.random() * collageItems.length);
         changeImage(randomIndex);
     }, 8000);
 }
@@ -192,4 +192,25 @@ document.addEventListener('DOMContentLoaded', () => {
     initVideoAnimation();
     createCollage();
     initMusicPlayer();
+    initHamburgerMenu();
 });
+
+// === HAMBURGER MENU ===
+function initHamburgerMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+    
+    // Close menu when clicking a link
+    const links = navLinks.querySelectorAll('a');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+}
