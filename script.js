@@ -30,7 +30,6 @@ let currentTrackIndex = 0;
 let musicPlaying = false;
 let currentImagePool = [];
 let collageItems = [];
-let shuffledTracks = [];
 
 function shuffle(array) {
     const arr = [...array];
@@ -138,7 +137,7 @@ function shuffleMusic() {
 function initMusicPlayer() {
     const audio = document.getElementById('background-music');
     const toggleBtn = document.getElementById('music-toggle');
-    shuffledTracks = shuffleMusic(); // jetzt global
+    let shuffledTracks = shuffleMusic();
     
     audio.src = MUSIC_FOLDER + shuffledTracks[currentTrackIndex];
     audio.volume = 0.3;
@@ -161,6 +160,12 @@ function initMusicPlayer() {
     
     audio.addEventListener('ended', () => {
         currentTrackIndex = (currentTrackIndex + 1) % shuffledTracks.length;
+        
+        // Wenn alle Songs durch sind, neu shuffeln
+        if (currentTrackIndex === 0) {
+            shuffledTracks = shuffleMusic();
+        }
+        
         audio.src = MUSIC_FOLDER + shuffledTracks[currentTrackIndex];
         if (musicPlaying) {
             audio.play();
