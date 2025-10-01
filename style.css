@@ -262,6 +262,7 @@ html {
     cursor: pointer;
     transition: all 0.3s;
     white-space: nowrap;
+    margin-left: auto;
 }
 
 .nav-music:hover {
