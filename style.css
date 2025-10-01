@@ -130,12 +130,13 @@ html {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 107, 53, 0.3);
     z-index: 1000;
+    padding-top: env(safe-area-inset-top);
 }
 
 .nav-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0.8rem 1rem;
+    padding: 1rem 1rem 0.8rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -336,15 +337,6 @@ html {
     .nav-music {
         padding: 0.6rem 1.5rem;
         font-size: 1rem;
-    }
-    
-    .desktop-only {
-        display: block;
-    }
-    
-    .nav-login {
-        padding: 0.6rem 1.8rem;
-        font-size: 1.2rem;
     }
 }
 
