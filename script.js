@@ -177,6 +177,7 @@ function initMusicPlayer() {
     
     // Wenn Track zu Ende ist
     audio.addEventListener('ended', () => {
+        console.log('!!!! ENDED EVENT FIRED !!!!');
         console.log('Track ended:', playlist[currentIndex]);
         currentIndex++;
         
@@ -193,6 +194,13 @@ function initMusicPlayer() {
         // Weiterspielen wenn Musik an war
         if (musicPlaying) {
             audio.play().catch(e => console.log('Play error:', e));
+        }
+    });
+    
+    // ZUSÄTZLICHER TEST - andere Events
+    audio.addEventListener('timeupdate', () => {
+        if (audio.duration - audio.currentTime < 1 && audio.duration > 0) {
+            console.log('Track fast zu Ende! Noch', audio.duration - audio.currentTime, 'Sekunden');
         }
     });
     
