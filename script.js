@@ -141,9 +141,13 @@ function shuffleMusic() {
 function initMusicPlayer() {
     const audio = document.getElementById('background-music');
     const toggleBtn = document.getElementById('music-toggle');
-    let shuffledTracks = shuffleMusic();
     
-    audio.src = MUSIC_FOLDER + shuffledTracks[currentTrackIndex];
+    // Shuffle tracks beim Start
+    let shuffledTracks = shuffleMusic();
+    let trackIndex = 0;
+    
+    // Lade ersten Track
+    audio.src = MUSIC_FOLDER + shuffledTracks[trackIndex];
     audio.volume = 0.3;
     
     toggleBtn.addEventListener('click', () => {
@@ -162,20 +166,26 @@ function initMusicPlayer() {
         }
     });
     
+    // Wenn Track endet, nächsten laden
     audio.addEventListener('ended', () => {
-        currentTrackIndex = (currentTrackIndex + 1) % shuffledTracks.length;
+        trackIndex++;
         
-        // Wenn alle Songs durch sind, neu shuffeln
-        if (currentTrackIndex === 0) {
+        // Wenn alle durch sind, neu shuffeln
+        if (trackIndex >= shuffledTracks.length) {
             shuffledTracks = shuffleMusic();
+            trackIndex = 0;
         }
         
-        audio.src = MUSIC_FOLDER + shuffledTracks[currentTrackIndex];
+        audio.src = MUSIC_FOLDER + shuffledTracks[trackIndex];
+        
         if (musicPlaying) {
-            audio.play();
+            audio.play().catch(e => {
+                console.log('Play error:', e);
+            });
         }
     });
     
+    // Versuche Autoplay
     audio.play().then(() => {
         musicPlaying = true;
         toggleBtn.textContent = '🔊 Music';
@@ -198,19 +208,19 @@ document.addEventListener('DOMContentLoaded', () => {
 // === HAMBURGER MENU ===
 function initHamburgerMenu() {
     const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+    const mobileMenu = document.getElementById('mobile-menu');
     
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
     });
     
     // Close menu when clicking a link
-    const links = navLinks.querySelectorAll('a');
+    const links = mobileMenu.querySelectorAll('a');
     links.forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
+            mobileMenu.classList.remove('active');
         });
     });
 }
