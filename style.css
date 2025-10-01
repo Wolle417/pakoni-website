@@ -136,7 +136,7 @@ html {
 .nav-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 1rem 1rem 0.8rem 1rem;
+    padding: 1.2rem 1rem 0.8rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -147,20 +147,21 @@ html {
 .hamburger {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 8px;
+    padding: 10px 8px;
     z-index: 1001;
 }
 
 .hamburger span {
-    width: 25px;
+    width: 28px;
     height: 3px;
     background: #ff6b35;
     transition: all 0.3s;
     border-radius: 2px;
+    box-shadow: 0 0 5px rgba(255, 107, 53, 0.5);
 }
 
 .hamburger.active span:nth-child(1) {
