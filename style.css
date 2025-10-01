@@ -207,7 +207,7 @@ html {
 /* Mobile Menu Overlay */
 .mobile-menu {
     position: fixed;
-    top: 60px;
+    top: 70px;
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.98);
@@ -249,17 +249,16 @@ html {
     display: flex;
     gap: 0.5rem;
     align-items: center;
-    margin-left: auto;
 }
 
 .nav-music {
-    padding: 0.4rem 0.8rem;
+    padding: 0.5rem 1rem;
     background: rgba(255, 107, 53, 0.8);
     border: 2px solid #ff6b35;
     border-radius: 5px;
     color: #fff;
     font-family: 'Houdini', sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     cursor: pointer;
     transition: all 0.3s;
     white-space: nowrap;
