@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakoni Magic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Layer -->
+    <div id="collage-grid"></div>
+
+    <!-- Audio Player (hidden) -->
+    <audio id="background-music" loop>
+        <source src="" type="audio/mpeg">
+    </audio>
+
+    <!-- Content Layer -->
+    <div id="content-layer">
+        
+        <!-- Navigation (fixed top) -->
+        <nav id="main-nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <video class="nav-profile-img" autoplay loop muted playsinline>
+                        <source src="movs/proprop.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button id="music-toggle" class="nav-music">Music On</button>
+                    <button class="nav-login">Login</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <h1 class="pakoni-magic">Pakoni Magic</h1>
+                </div>
+                <div class="hero-bottom">
+                    <div class="hero-text">
+                        <p>Welcome to the world of illusion and wonder. Experience spectacular magic tricks that will captivate you.</p>
+                        <p>From classic close-up magic to breathtaking stage performances — let yourself be enchanted.</p>
+                    </div>
+                    <div class="hero-right">
+                        <video class="hero-profile" autoplay loop muted playsinline>
+                            <source src="movs/proprop.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section id="videos" class="content-section">
+            <div class="section-container">
+                <h2 class="section-title">Featured Performance</h2>
+                <div class="video-container">
+                    <iframe 
+                        width="100%" 
+                        height="600" 
+                        src="https://www.youtube.com/embed/bEGbiTEZtR4?start=1" 
+                        title="Pakoni Magic - Beacon of Hope"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
