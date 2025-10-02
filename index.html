@@ -29,11 +29,11 @@
                 </button>
                 
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#videos">Featured Performance</a></li>
-                    <li><a href="#shop">Shop</a></li>
-                    <li><a href="#login">Login</a></li>
+                    <li><a href="/" data-link>Home</a></li>
+                    <li><a href="/about" data-link>About Me</a></li>
+                    <li><a href="/videos" data-link>Featured Performance</a></li>
+                    <li><a href="/shop" data-link>Shop</a></li>
+                    <li><a href="/login" data-link>Login</a></li>
                 </ul>
                 
                 <button id="music-toggle" class="nav-music">▶ Music</button>
@@ -42,54 +42,24 @@
             <!-- Mobile Menu Overlay -->
             <div class="mobile-menu" id="mobile-menu">
                 <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#videos">Featured Performance</a></li>
-                    <li><a href="#shop">Shop</a></li>
-                    <li><a href="#login">Login</a></li>
+                    <li><a href="/about" data-link>About Me</a></li>
+                    <li><a href="/videos" data-link>Featured Performance</a></li>
+                    <li><a href="/shop" data-link>Shop</a></li>
+                    <li><a href="/login" data-link>Login</a></li>
                 </ul>
             </div>
         </nav>
 
-        <!-- Hero Section -->
-        <section id="hero">
-            <div class="hero-content">
-                <div class="hero-left">
-                    <h1 class="pakoni-magic">Pakoni Magic</h1>
-                </div>
-                <div class="hero-bottom">
-                    <div class="hero-text">
-                        <p>Welcome to the world of illusion and wonder. Experience spectacular magic tricks that will captivate you.</p>
-                        <p>From classic close-up magic to breathtaking stage performances — let yourself be enchanted.</p>
-                    </div>
-                    <div class="hero-right">
-                        <video class="hero-profile" autoplay loop muted playsinline>
-                            <source src="movs/proprop.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Video Section -->
-        <section id="videos" class="content-section">
-            <div class="section-container">
-                <h2 class="section-title">Featured Performance</h2>
-                <div class="video-container">
-                    <iframe 
-                        width="100%" 
-                        height="600" 
-                        src="https://www.youtube.com/embed/bEGbiTEZtR4?start=1" 
-                        title="Pakoni Magic - Beacon of Hope"
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-        </section>
+        <!-- Main Content Area - Pages load here -->
+        <main id="main-content">
+            <!-- Content will be loaded dynamically -->
+        </main>
 
     </div>
 
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="js/router.js"></script>
+    <script src="js/pages.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
