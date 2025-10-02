@@ -176,30 +176,6 @@ html {
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
-.nav-logo {
-    display: flex;
-    align-items: center;
-}
-
-.nav-logo a {
-    display: flex;
-    align-items: center;
-}
-
-.nav-profile-img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 2px solid #ff6b35;
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.nav-profile-img:hover {
-    transform: scale(1.1);
-}
-
 .nav-links {
     display: none;
 }
@@ -248,12 +224,6 @@ html {
     transform: translateX(10px);
 }
 
-.nav-actions {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-}
-
 .nav-music {
     padding: 0.5rem 1rem;
     background: rgba(255, 107, 53, 0.8);
@@ -277,37 +247,10 @@ html {
     border-color: #666;
 }
 
-.nav-login {
-    padding: 0.4rem 1rem;
-    background: #ff6b35;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-family: 'Houdini', sans-serif;
-    font-size: 0.9rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: opacity 0.3s;
-}
-
-.nav-login:hover {
-    opacity: 0.8;
-}
-
-/* Hide Login on Mobile */
-.desktop-only {
-    display: none;
-}
-
 /* Desktop Navigation */
 @media (min-width: 769px) {
     .nav-container {
         padding: 1rem 2rem;
-    }
-    
-    .nav-profile-img {
-        width: 50px;
-        height: 50px;
     }
     
     .hamburger {
@@ -534,19 +477,6 @@ html {
     text-align: center;
 }
 
-/* ========== ABOUT SECTION ========== */
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.about-text p {
-    color: #ccc;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
-
 /* ========== VIDEO SECTION ========== */
 .video-container {
     max-width: 900px;
@@ -560,67 +490,6 @@ html {
     display: block;
 }
 
-/* ========== SHOP SECTION ========== */
-.shop-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.shop-item {
-    border: 2px solid #ff6b35;
-    border-radius: 10px;
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s;
-}
-
-.shop-item:hover {
-    transform: translateY(-5px);
-}
-
-.shop-video {
-    width: 100%;
-    aspect-ratio: 16/9;
-}
-
-.shop-video iframe {
-    display: block;
-}
-
-.shop-info {
-    padding: 1.5rem;
-}
-
-.shop-info h3 {
-    font-family: 'Houdini', sans-serif;
-    color: #ff6b35;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.shop-price {
-    color: #fff;
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-/* ========== RESPONSIVE ========== */
-@media (max-width: 968px) {
-    .shop-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .video-container iframe {
-        height: 250px;
-    }
-}
 /* ========== ABOUT PAGE ========== */
 .about-page {
     min-height: 100vh;
@@ -670,7 +539,34 @@ html {
     font-size: 1.1rem;
 }
 
+/* ========== SHOP & LOGIN PAGES ========== */
+.shop-page, .login-page {
+    min-height: 100vh;
+    padding: 8rem 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop-container, .login-container {
+    text-align: center;
+}
+
+.shop-placeholder, .login-placeholder {
+    color: #ccc;
+    font-size: 1.5rem;
+}
+
+/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .video-container iframe {
+        height: 250px;
+    }
+    
     .about-grid {
         grid-template-columns: 1fr;
     }
