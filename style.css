@@ -575,3 +575,133 @@ html {
         font-size: 2.5rem;
     }
 }
+
+.shop-page-full {
+    min-height: 100vh;
+    padding: 8rem 2rem 4rem;
+}
+
+.shop-page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.shop-intro {
+    text-align: center;
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.products-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.product-card {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #ff6b35;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(255, 107, 53, 0.3);
+}
+
+.product-video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-video iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-title {
+    font-family: 'Houdini', sans-serif;
+    font-size: 2rem;
+    color: #ff6b35;
+    margin-bottom: 1rem;
+}
+
+.product-description {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.difficulty {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-family: 'Houdini', sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.difficulty.easy {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+    border: 2px solid #4caf50;
+}
+
+.difficulty.medium {
+    background: rgba(255, 152, 0, 0.2);
+    color: #ff9800;
+    border: 2px solid #ff9800;
+}
+
+.difficulty.hard {
+    background: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+    border: 2px solid #f44336;
+}
+
+.price {
+    font-family: 'Houdini', sans-serif;
+    font-size: 1.8rem;
+    color: #ff6b35;
+    font-weight: bold;
+}
+
+/* Mobile Shop */
+@media (max-width: 968px) {
+    .product-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-title {
+        font-size: 1.5rem;
+    }
+    
+    .price {
+        font-size: 1.5rem;
+    }
+}
+
+Kopiere die neue shop.html und füge das CSS hinzu. Preise und Difficulties sind Platzhalter - sag mir wenn du andere willst!
+
+
