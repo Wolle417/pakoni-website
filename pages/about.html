@@ -4,7 +4,7 @@
         
         <div class="about-grid">
             <div class="about-image">
-                <video class="about-img" src="movs/morph1.mp4" autoplay loop muted playsinline>
+                <video class="about-img" src="/movs/morph1.mp4" autoplay loop muted playsinline>
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -36,15 +36,23 @@
 </section>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const video = document.querySelector('.about-img');
-    if (video && video.tagName === 'VIDEO') {
-        function setSlowMotion() {
-            video.playbackRate = 0.25;
-        }
-        setSlowMotion();
-        video.addEventListener('loadedmetadata', setSlowMotion);
-        video.addEventListener('play', setSlowMotion);
-    }
-});
+// Mehrere Ansätze für maximale Kompatibilität
+const video = document.querySelector('.about-img');
+
+if (video && video.tagName === 'VIDEO') {
+    // Sofort setzen
+    video.playbackRate = 0.25;
+    
+    // Nach dem Laden nochmal setzen
+    video.addEventListener('loadedmetadata', () => {
+        video.playbackRate = 0.25;
+    });
+    
+    // Nach dem Start nochmal setzen
+    video.addEventListener('play', () => {
+        video.playbackRate = 0.25;
+    });
+    
+    console.log('Video speed set to 25%');
+}
 </script>
