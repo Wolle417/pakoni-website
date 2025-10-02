@@ -218,14 +218,6 @@ function initMusicPlayer() {
     });
 }
 
-// === INIT ===
-document.addEventListener('DOMContentLoaded', () => {
-    initVideoAnimation();
-    createCollage();
-    initMusicPlayer();
-    initHamburgerMenu();
-});
-
 // === HAMBURGER MENU ===
 function initHamburgerMenu() {
     const hamburger = document.getElementById('hamburger');
@@ -245,3 +237,34 @@ function initHamburgerMenu() {
         });
     });
 }
+
+// === SMOOTH SCROLL FOR ANCHOR LINKS ===
+function initSmoothScroll() {
+    document.addEventListener('click', (e) => {
+        // Check if it's an anchor link without data-link attribute
+        if (e.target.tagName === 'A' && 
+            e.target.getAttribute('href')?.startsWith('#') && 
+            !e.target.hasAttribute('data-link')) {
+            
+            e.preventDefault();
+            const targetId = e.target.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
+            }
+        }
+    });
+}
+
+// === INIT ===
+document.addEventListener('DOMContentLoaded', () => {
+    initVideoAnimation();
+    createCollage();
+    initMusicPlayer();
+    initHamburgerMenu();
+    initSmoothScroll();
+});
