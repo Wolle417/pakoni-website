@@ -1,4 +1,4 @@
-/* ========== HERO REDESIGN - VARIATION 3 (CORRECTED) ========== */
+/* ========== HERO REDESIGN - VARIATION 3 ========== */
 
 /* Hero Section */
 #hero {
@@ -28,18 +28,18 @@
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 4rem;
-    align-items: start;
+    align-items: center;
 }
 
 .hero-video-left {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .hero-profile-video {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     border: 4px solid #ff6b35;
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(255, 107, 53, 0.6);
@@ -48,6 +48,7 @@
 
 /* Text container with dark background for readability */
 .hero-text-right {
+    text-align: left;
     background: rgba(0, 0, 0, 0.8);
     padding: 2.5rem;
     border-radius: 12px;
@@ -107,13 +108,13 @@
 }
 
 .btn-primary {
-    padding: 0.6rem 1.3rem;
+    padding: 0.7rem 1.5rem;
     background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
     border: 2px solid #ff6b35;
     border-radius: 6px;
     color: #fff;
     font-family: 'Houdini', sans-serif;
-    font-size: 0.95rem;
+    font-size: 1rem;
     text-decoration: none;
     transition: all 0.3s;
     box-shadow: 0 0 15px rgba(255, 107, 53, 0.4);
@@ -127,13 +128,13 @@
 }
 
 .btn-secondary {
-    padding: 0.6rem 1.3rem;
+    padding: 0.7rem 1.5rem;
     background: transparent;
     border: 2px solid #ff6b35;
     border-radius: 6px;
     color: #ff6b35;
     font-family: 'Houdini', sans-serif;
-    font-size: 0.95rem;
+    font-size: 1rem;
     text-decoration: none;
     transition: all 0.3s;
     cursor: pointer;
@@ -150,11 +151,13 @@
     #hero {
         padding: 10rem 2rem 6rem;
     }
-    
+    .hero-profile-video {
+        width: 300px;
+        height: 300px;
+    }
     .statement-line {
         font-size: 1.75rem;
     }
-    
     .hero-body p {
         font-size: 1.2rem;
     }
@@ -163,43 +166,34 @@
 /* Mobile: Stack vertically */
 @media (max-width: 768px) {
     #hero {
-        min-height: 100vh;
+        min-height: auto;
         padding: 6rem 1.5rem 3rem;
-        display: flex;
-        justify-content: center;
     }
-    
     .hero-wrapper {
         width: 100%;
     }
-    
     #hero .hero-content {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
     .hero-text-right {
+        text-align: center;
         padding: 2rem 1.5rem;
     }
-    
     .hero-profile-video {
         width: 220px;
         height: 220px;
     }
-    
     .statement-line {
         font-size: 1.4rem;
     }
-    
     .hero-body p {
         font-size: 1.05rem;
     }
-    
     .hero-final p {
         font-size: 1rem;
     }
-    
     .hero-cta {
-        justify-content: flex-start;
+        justify-content: center;
     }
 }
