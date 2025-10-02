@@ -4,7 +4,9 @@
         
         <div class="about-grid">
             <div class="about-image">
-                <img src="images/proprop.png" alt="Pakoni" class="about-img">
+                <video class="about-img" src="movs/morph1.mp4" autoplay loop muted playsinline>
+                    Your browser does not support the video tag.
+                </video>
             </div>
             
             <div class="about-text">
@@ -32,3 +34,12 @@
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const video = document.querySelector('.about-img');
+    if (video && video.tagName === 'VIDEO') {
+        video.playbackRate = 0.25; // 25% speed
+    }
+});
+</script>
