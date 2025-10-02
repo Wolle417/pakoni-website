@@ -39,7 +39,5 @@ router.addRoute('/404', () => {
     `;
 });
 
-// Router erst nach der Registrierung initialisieren!
-if (window.router && typeof window.router.init === 'function') {
-    window.router.init();
-}
+// Initialize router after routes are registered
+router.init();
