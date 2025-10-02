@@ -3,20 +3,8 @@
         <h1 class="page-title">About Me</h1>
         
         <div class="about-grid">
-            <div class="about-image" style="display:flex;justify-content:center;align-items:center;">
-                <div style="
-                    border: 3px solid #ff6600;
-                    border-radius: 18px;
-                    box-shadow: 0 0 32px #ff6600;
-                    padding: 8px;
-                    background: #181818;
-                    display: inline-block;
-                ">
-                    <video class="about-video" src="images/movs.mp4" autoplay loop muted playsinline
-                        style="width:200px;height:200px;object-fit:cover;border-radius:14px;display:block;">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+            <div class="about-image">
+                <img src="images/proprop.png" alt="Pakoni" class="about-img">
             </div>
             
             <div class="about-text">
@@ -44,9 +32,3 @@
         </div>
     </div>
 </section>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const video = document.querySelector('.about-video');
-    if (video) video.playbackRate = 0.85;
-});
-</script>
