@@ -29,6 +29,23 @@ class Router {
         this.loadRoute(path);
     }
     
+    // Initialize About Page Video with slow motion
+    initAboutPageVideo() {
+        const video = document.getElementById('morph-video');
+        if (video) {
+            video.playbackRate = 0.25;
+            video.defaultPlaybackRate = 0.25;
+            
+            ['loadedmetadata', 'canplay', 'play', 'playing'].forEach(event => {
+                video.addEventListener(event, () => {
+                    video.playbackRate = 0.25;
+                });
+            });
+            
+            console.log('About video speed set to 0.25x');
+        }
+    }
+    
     // Load route content
     async loadRoute(path) {
         this.currentPath = path;
@@ -49,6 +66,14 @@ class Router {
                 if (hamburger && mobileMenu) {
                     hamburger.classList.remove('active');
                     mobileMenu.classList.remove('active');
+                }
+                
+                // Initialize page-specific features
+                if (path === '/about') {
+                    // Kurz warten bis Video im DOM ist
+                    setTimeout(() => {
+                        this.initAboutPageVideo();
+                    }, 100);
                 }
             }
         }
