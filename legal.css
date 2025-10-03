@@ -1,0 +1,115 @@
+/* ========== LEGAL PAGES ========== */
+
+.legal-page {
+    min-height: 100vh;
+    padding: 8rem 2rem 4rem;
+}
+
+.legal-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.legal-content {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 107, 53, 0.3);
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: 0 0 30px rgba(255, 107, 53, 0.2);
+}
+
+.legal-content h2 {
+    font-family: 'Houdini', sans-serif;
+    font-size: 2rem;
+    color: #ff6b35;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.legal-content h3 {
+    font-family: 'Houdini', sans-serif;
+    font-size: 1.3rem;
+    color: #ff6b35;
+    margin: 2rem 0 1rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.legal-content p {
+    color: #e0e0e0;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.legal-content ul,
+.legal-content ol {
+    color: #e0e0e0;
+    line-height: 1.8;
+    margin: 1rem 0 1rem 2rem;
+}
+
+.legal-content li {
+    margin-bottom: 0.5rem;
+}
+
+.legal-content a {
+    color: #ff6b35;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.legal-content a:hover {
+    color: #fff;
+}
+
+/* Widerruf Form Styling */
+.widerruf-form {
+    margin-top: 3rem;
+}
+
+.form-box {
+    background: rgba(255, 107, 53, 0.05);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 1.5rem;
+}
+
+.form-box p {
+    margin-bottom: 1.5rem;
+}
+
+.form-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.form-list li {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+/* Legal Pages Mobile */
+@media (max-width: 768px) {
+    .legal-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    .legal-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .legal-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .legal-content p,
+    .legal-content li {
+        font-size: 0.95rem;
+    }
+    
+    .form-box {
+        padding: 1.5rem;
+    }
+}

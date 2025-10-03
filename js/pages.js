@@ -27,6 +27,23 @@ router.addRoute('/login', async () => {
     return await loadPage('pages/login.html');
 });
 
+// Legal pages
+router.addRoute('/impressum', async () => {
+    return await loadPage('pages/impressum.html');
+});
+
+router.addRoute('/agb', async () => {
+    return await loadPage('pages/agb.html');
+});
+
+router.addRoute('/datenschutz', async () => {
+    return await loadPage('pages/datenschutz.html');
+});
+
+router.addRoute('/widerruf', async () => {
+    return await loadPage('pages/widerruf.html');
+});
+
 router.addRoute('/404', () => {
     return `
         <section class="error-page">

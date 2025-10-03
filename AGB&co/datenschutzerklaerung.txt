@@ -1,0 +1,65 @@
+Datenschutzerklärung
+
+1. Verantwortlicher
+Verantwortlich für die Datenverarbeitung ist:
+
+Stefan Schönwälder
+Gleiwitzer Str. 2
+91074 Herzogenaurach
+E-Mail: [noch eintragen]
+
+2. Erhebung und Speicherung personenbezogener Daten sowie Art und Zweck der Verwendung
+Wenn Sie unseren Online-Shop besuchen oder nutzen, erheben wir folgende Daten:
+- Bestelldaten (gekaufte Produkte, Bestellzeitpunkt)
+- Personenstammdaten (Name, Adresse, E-Mail-Adresse)
+- Zahlungsinformationen (abhängig von der gewählten Zahlungsmethode)
+
+Die Verarbeitung erfolgt zur Erfüllung des Vertrags (Art. 6 Abs. 1 lit. b DSGVO).
+
+3. Zahlungsabwicklung über Stripe
+Zur Abwicklung von Zahlungen nutzen wir den Zahlungsdienstleister Stripe Payments Europe, Ltd., 
+1 Grand Canal Street Lower, Grand Canal Dock, Dublin, Irland.
+
+Bei der Zahlung werden folgende Daten an Stripe übermittelt:
+- Kaufbetrag
+- Rechnungsinformationen
+- Name und E-Mail-Adresse
+- ggf. weitere Zahlungsdaten (z. B. Kreditkartendaten)
+
+Stripe kann die Daten zur Betrugsprävention, Zahlungsabwicklung und Bonitätsprüfung nutzen. 
+Weitere Infos finden Sie in den Datenschutzhinweisen von Stripe: https://stripe.com/de/privacy
+
+4. Hosting
+Unsere Website wird bei Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA gehostet.
+Beim Besuch der Website erhebt Vercel automatisch Zugriffsdaten (z. B. IP-Adresse, Browser, Uhrzeit).
+Diese Daten sind technisch notwendig, um die Website anzuzeigen, und werden nicht mit anderen Datenquellen zusammengeführt.
+
+5. Weitergabe von Daten an Dritte
+Eine Weitergabe an Dritte erfolgt ausschließlich, soweit dies für die Vertragsabwicklung erforderlich ist 
+(z. B. Zahlungsdienstleister) oder wir gesetzlich verpflichtet sind.
+
+6. Speicherdauer
+Wir speichern personenbezogene Daten nur so lange, wie dies zur Abwicklung des Vertrags oder gesetzlicher Aufbewahrungsfristen notwendig ist.
+
+7. Rechte der betroffenen Personen
+Sie haben das Recht,
+- gemäß Art. 15 DSGVO Auskunft über Ihre gespeicherten Daten zu verlangen,
+- gemäß Art. 16 DSGVO Berichtigung unrichtiger Daten zu verlangen,
+- gemäß Art. 17 DSGVO Löschung zu verlangen,
+- gemäß Art. 18 DSGVO Einschränkung der Verarbeitung zu verlangen,
+- gemäß Art. 20 DSGVO Datenübertragbarkeit zu verlangen,
+- gemäß Art. 21 DSGVO Widerspruch gegen die Verarbeitung einzulegen.
+
+8. Widerruf von Einwilligungen
+Sofern Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen.
+
+9. Beschwerderecht bei der Aufsichtsbehörde
+Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren.
+
+10. Kontakt zum Datenschutz
+Für Fragen zur Erhebung, Verarbeitung oder Nutzung Ihrer personenbezogenen Daten wenden Sie sich bitte an:
+
+Stefan Schönwälder
+Gleiwitzer Str. 2
+91074 Herzogenaurach
+E-Mail: [noch eintragen]
